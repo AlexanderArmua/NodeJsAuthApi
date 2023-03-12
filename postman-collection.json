@@ -1,0 +1,485 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Platzi Backend con Node",
+		"_postman_id": "021c3641-4de1-456a-d6ad-ec61dd7c892a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"description": "",
+			"item": [
+				{
+					"name": "Get all products",
+					"request": {
+						"url": {
+							"raw": "{{url}}:{{port}}/api/{{version}}/products?price_max=10000",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"{{version}}",
+								"products"
+							],
+							"query": [
+								{
+									"key": "price_max",
+									"value": "10000",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4MzQyMDU1fQ.qu4AMVBqE_eUteozOKd-inv9NzdQLiqOnc7soYuRWwA",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get one product",
+					"request": {
+						"url": "{{url}}:{{port}}/api/{{version}}/products/3",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4MzQyMDU1fQ.qu4AMVBqE_eUteozOKd-inv9NzdQLiqOnc7soYuRWwA",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create product",
+					"request": {
+						"url": "{{url}}:{{port}}/api/{{version}}/products",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4NDkxMjIyfQ.s2oqvcMIGF0KGENCKnAYIjEVTd-UTh1kWrlpgLyxB94",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"TESTTTT 4\",\n\t\"price\": 500,\n\t\"image\": \"http://google.com\",\n\t\"categoryId\": 3,\n\t\"description\": \"DESCRIPPPPTIONNN\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete one product",
+					"request": {
+						"url": "{{url}}:{{port}}/api/{{version}}/products/1",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Patch product",
+					"request": {
+						"url": "{{url}}:{{port}}/api/{{version}}/products/12",
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"xD\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update product",
+					"request": {
+						"url": "{{url}}:{{port}}/api/{{version}}/products/12",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"xD\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"description": "",
+			"item": [
+				{
+					"name": "Users",
+					"request": {
+						"url": "{{url}}:{{port}}/api/{{version}}/users/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "12345",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get one user",
+					"request": {
+						"url": "{{url}}:{{port}}/api/{{version}}/users/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "12345",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4MzQyMDU1fQ.qu4AMVBqE_eUteozOKd-inv9NzdQLiqOnc7soYuRWwA",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"description": "",
+			"item": [
+				{
+					"name": "Get my orders",
+					"request": {
+						"url": "{{url}}:{{port}}/api/{{version}}/profile/my-orders",
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "12345",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4MzQyMDU1fQ.qu4AMVBqE_eUteozOKd-inv9NzdQLiqOnc7soYuRWwA",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create order",
+					"request": {
+						"url": "{{url}}:{{port}}/api/{{version}}/orders",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4MzQyMDU1fQ.qu4AMVBqE_eUteozOKd-inv9NzdQLiqOnc7soYuRWwA",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"customerId\": 1\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Order Add item",
+					"request": {
+						"url": "{{url}}:{{port}}/api/{{version}}/orders/add-item",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4MzQyMDU1fQ.qu4AMVBqE_eUteozOKd-inv9NzdQLiqOnc7soYuRWwA",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\": 7,\n\t\"productId\": 2,\n\t\"amount\": 100\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"description": "",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"url": "{{url}}:{{port}}/api/{{version}}/categories",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4NDkxMjIyfQ.s2oqvcMIGF0KGENCKnAYIjEVTd-UTh1kWrlpgLyxB94",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"cateogry 33333\",\n\t\"image\": \"http://google2.com\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"description": "",
+			"item": [
+				{
+					"name": "Get one customer",
+					"request": {
+						"url": "{{url}}:{{port}}/api/{{version}}/customers",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4MzQyMDU1fQ.qu4AMVBqE_eUteozOKd-inv9NzdQLiqOnc7soYuRWwA",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create customer",
+					"request": {
+						"url": "{{url}}:{{port}}/api/{{version}}/customers",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "x-api-key",
+								"value": "12345",
+								"description": ""
+							},
+							{
+								"key": "origin",
+								"value": "http://localhost:8080",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzgzMzk2Nzl9.e-8L2MBpcgHUQAxKFrFL8aSmkVsEE0v3w3sV7G5Yo1o",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Customer 01\",\n\t\"lastName\": \"Customer 01 lastname\",\n\t\"phone\": \"12345678\",\n\t\"userId\": 9\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"description": "",
+			"item": [
+				{
+					"name": "Recovery by email",
+					"request": {
+						"url": "{{url}}:{{port}}/api/{{version}}/auth/change-password",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4NDkxMjIyfQ.s2oqvcMIGF0KGENCKnAYIjEVTd-UTh1kWrlpgLyxB94",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY3ODY0MTg1MiwiZXhwIjoxNjc4NjQyNzUyfQ.dKnmWY3TPgbgSihy13WyzurUQ2jP8NO2MT95vNNDyZs\",\n\t\"password\": \"new_password!!!!\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Recovery by email copy",
+					"request": {
+						"url": "{{url}}:{{port}}/api/{{version}}/auth/recovery",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4NDkxMjIyfQ.s2oqvcMIGF0KGENCKnAYIjEVTd-UTh1kWrlpgLyxB94",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"your_email@your_domain.com\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Login User Local Strategy",
+					"request": {
+						"url": "{{url}}:{{port}}/api/{{version}}/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "x-api-key",
+								"value": "12345",
+								"description": ""
+							},
+							{
+								"key": "origin",
+								"value": "http://localhost:8080",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"yourEmail@yourDomain.com\",\n\t\"password\": \"password\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create user",
+					"request": {
+						"url": "{{url}}:{{port}}/api/{{version}}/users",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "x-api-key",
+								"value": "12345",
+								"description": ""
+							},
+							{
+								"key": "origin",
+								"value": "http://localhost:8080",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzgzMzk2Nzl9.e-8L2MBpcgHUQAxKFrFL8aSmkVsEE0v3w3sV7G5Yo1o",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"yourEmail@yourDomain.com\",\n\t\"password\": \"password\",\n\t\"role\": \"admin\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
