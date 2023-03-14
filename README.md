@@ -8,7 +8,7 @@ This is a complete API with NodeJs, Express, Sequelize, Postgres, Docker, JWT, B
   ```bash
     curl -X POST \
       http://localhost:3000/api/v1/users \
-      -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzgzMzk2Nzl9.e-8L2MBpcgHUQAxKFrFL8aSmkVsEE0v3w3sV7G5Yo1o' \
+      -H 'authorization: Bearer {{token}}' \
       -H 'cache-control: no-cache' \
       -H 'content-type: application/json' \
       -H 'origin: http://localhost:8080' \

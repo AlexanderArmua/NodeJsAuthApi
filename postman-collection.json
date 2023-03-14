@@ -39,7 +39,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4MzQyMDU1fQ.qu4AMVBqE_eUteozOKd-inv9NzdQLiqOnc7soYuRWwA",
+								"value": "Bearer {{token}}",
 								"description": ""
 							}
 						],
@@ -56,7 +56,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4MzQyMDU1fQ.qu4AMVBqE_eUteozOKd-inv9NzdQLiqOnc7soYuRWwA",
+								"value": "Bearer {{token}}",
 								"description": ""
 							}
 						],
@@ -78,7 +78,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4NDkxMjIyfQ.s2oqvcMIGF0KGENCKnAYIjEVTd-UTh1kWrlpgLyxB94",
+								"value": "Bearer {{token}}",
 								"description": ""
 							}
 						],
@@ -177,7 +177,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4MzQyMDU1fQ.qu4AMVBqE_eUteozOKd-inv9NzdQLiqOnc7soYuRWwA",
+								"value": "Bearer {{token}}",
 								"description": ""
 							}
 						],
@@ -205,7 +205,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4MzQyMDU1fQ.qu4AMVBqE_eUteozOKd-inv9NzdQLiqOnc7soYuRWwA",
+								"value": "Bearer {{token}}",
 								"description": ""
 							}
 						],
@@ -227,7 +227,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4MzQyMDU1fQ.qu4AMVBqE_eUteozOKd-inv9NzdQLiqOnc7soYuRWwA",
+								"value": "Bearer {{token}}",
 								"description": ""
 							}
 						],
@@ -252,7 +252,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4MzQyMDU1fQ.qu4AMVBqE_eUteozOKd-inv9NzdQLiqOnc7soYuRWwA",
+								"value": "Bearer {{token}}",
 								"description": ""
 							}
 						],
@@ -283,7 +283,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4NDkxMjIyfQ.s2oqvcMIGF0KGENCKnAYIjEVTd-UTh1kWrlpgLyxB94",
+								"value": "Bearer {{token}}",
 								"description": ""
 							}
 						],
@@ -309,7 +309,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4MzQyMDU1fQ.qu4AMVBqE_eUteozOKd-inv9NzdQLiqOnc7soYuRWwA",
+								"value": "Bearer {{token}}",
 								"description": ""
 							},
 							{
@@ -346,7 +346,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzgzMzk2Nzl9.e-8L2MBpcgHUQAxKFrFL8aSmkVsEE0v3w3sV7G5Yo1o",
+								"value": "Bearer {{token}}",
 								"description": ""
 							}
 						],
@@ -377,7 +377,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4NDkxMjIyfQ.s2oqvcMIGF0KGENCKnAYIjEVTd-UTh1kWrlpgLyxB94",
+								"value": "Bearer {{token}}",
 								"description": ""
 							}
 						],
@@ -402,7 +402,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5Iiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjc4NDkxMjIyfQ.s2oqvcMIGF0KGENCKnAYIjEVTd-UTh1kWrlpgLyxB94",
+								"value": "Bearer {{token}}",
 								"description": ""
 							}
 						],
@@ -467,7 +467,7 @@
 							},
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzgzMzk2Nzl9.e-8L2MBpcgHUQAxKFrFL8aSmkVsEE0v3w3sV7G5Yo1o",
+								"value": "Bearer {{token}}",
 								"description": ""
 							}
 						],
