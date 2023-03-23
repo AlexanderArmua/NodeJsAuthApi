@@ -19,6 +19,9 @@ app.use(ormErrorHandler);
 app.use(boomErrorHandler);
 app.use(errorHandler);
 
+// Return static content
+app.use('/app', express.static('public'));
+
 app.listen(port, () => {
   console.log('Mi port' +  port);
 });
