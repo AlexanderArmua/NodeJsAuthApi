@@ -6,6 +6,9 @@ const config = {
   port: process.env.PORT || 3000,
   url: process.env.URL || 'http://localhost',
 
+  appRoute: process.env.APP_ROUTE || 'app',
+  publicFolder: process.env.PUBLIC_FOLDER || 'public',
+
   dbUser:  process.env.DB_USER,
   dbPassword:  process.env.DB_PASSWORD,
   dbHost:  process.env.DB_HOST,

@@ -1,11 +1,13 @@
 const express = require('express');
 const routerApi = require('./routes');
 
+const { config } = require('./config/config');
+
 const { logErrors, errorHandler, boomErrorHandler, ormErrorHandler } = require('./middlewares/error.handler');
 const corsHandler = require('./middlewares/cors.handler');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = config.port;
 
 app.use(express.json());
 app.use(corsHandler());
@@ -20,8 +22,6 @@ app.use(boomErrorHandler);
 app.use(errorHandler);
 
 // Return static content
-app.use('/app', express.static('public'));
+app.use(`/${config.appRoute}`, express.static(config.publicFolder));
 
-app.listen(port, () => {
-  console.log('Mi port' +  port);
-});
+app.listen(port, () => console.log('Mi port' +  port));

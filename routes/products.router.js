@@ -1,5 +1,4 @@
 const express = require('express');
-
 const ProductsService = require('./../services/product.service');
 const validatorHandler = require('./../middlewares/validator.handler');
 const { createProductSchema, updateProductSchema, getProductSchema, queryProductSchema } = require('./../schemas/product.schema');
@@ -7,6 +6,8 @@ const passport = require('passport');
 
 const router = express.Router();
 const service = new ProductsService();
+
+const { uploadFile, getFileName } = require('./../utils/uploadFiles');
 
 router.get('/',
   passport.authenticate('jwt', { session: false }),
@@ -37,10 +38,18 @@ router.get('/:id',
 
 router.post('/',
   passport.authenticate('jwt', { session: false }),
+  uploadFile.single('file'),
   validatorHandler(createProductSchema, 'body'),
   async (req, res, next) => {
     try {
       const body = req.body;
+
+      if (req.file) {
+        body.image = getFileName(req.file.filename);
+      }
+
+      console.log(body)
+
       const newProduct = await service.create(body);
       res.status(201).json(newProduct);
     } catch (error) {
