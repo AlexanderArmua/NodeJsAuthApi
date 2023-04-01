@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba de frontend websockets</title>
+
+  <!--This file is automatically created by socket.io-->
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <h1>Look this</h1>
+
+  <div style="width: 100%; display: flex; flex-direction: row;">
+    <div style="width: 50%;">
+      <h2>New Messages</h2>
+      <ul id="ulForMessages" style="height: 500px;">
+
+    </div>
+    <div style="width: 50%;">
+      <h2>New Logins</h2>
+      <ul id="ulForLogins" style="height: 500px;">
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const socket = io.connect('http://localhost:3000', {
+      forceNew: true
+    });
+
+    const ulForMessages = document.querySelector('#ulForMessages');
+    const ulForLogins = document.querySelector('#ulForLogins');
+
+    socket.on('message', data => {
+      console.log("MENSAJE RECIBIDO 1: " + data)
+      const newLi = document.createElement('li');
+
+      ulForMessages.appendChild(newLi).innerHTML = data;
+    });
+
+    socket.on('login', data => {
+      console.log("MENSAJE RECIBIDO 2: " + data)
+      const newLi = document.createElement('li');
+
+      ulForLogins.appendChild(newLi).innerHTML = data;
+    });
+
+  </script>
+</body>
+</html>

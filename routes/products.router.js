@@ -48,8 +48,6 @@ router.post('/',
         body.image = getFileName(req.file.filename);
       }
 
-      console.log(body)
-
       const newProduct = await service.create(body);
       res.status(201).json(newProduct);
     } catch (error) {

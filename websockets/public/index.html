@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba de frontend websockets</title>
+
+  <!--This file is automatically created by socket.io-->
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <h1>Look this</h1>
+
+  <ul id="ulToModifyFromBackend" style="width: 500px; height: 500px;">
+
+  </div>
+
+  <script>
+    const socket = io.connect('http://localhost:8080', {
+      forceNew: true
+    });
+
+    const ulToChange = document.querySelector('#ulToModifyFromBackend');
+
+    socket.on('mensaje', data => {
+
+      ulToChange.appendChild(document.createElement('li')).innerHTML = data;
+
+    });
+  </script>
+</body>
+</html>

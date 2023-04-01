@@ -65,3 +65,22 @@ This is a complete API with NodeJs, Express, Sequelize, Postgres, Docker, JWT, B
   npm run migrations:generate <migration-name>
   ```
 
+### Upload file example
+#### POST: /products/
+#### Expects a form-data with the following fields
+  ```bash
+  name: string
+  description: string
+  price: number
+  file: file
+  ```
+
+### Sockets example
+On the file /socket.js you can find an example of how to use sockets with socket.io
+There are plenty of examples on the internet, but I wanted to show you how to use it with NodeJs and Express.
+
+with socket.io.emit you can send a message to all the clients connected to the server
+
+after a client connects to the server, you can send a message to that client with socket.emit and also can save the socket.id in the server to send messages to that client in the future
+
+In the endpoint POST: /login we send a different event to the users

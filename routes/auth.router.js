@@ -1,6 +1,8 @@
 const express = require('express');
 const passport = require('passport');
 
+const emitLogin = require('../socket').emitLogin;
+
 const router = express.Router();
 
 const AuthService = require('../services/auth.service');
@@ -13,6 +15,9 @@ router.post('/login',
       const user = req.user;
 
       const payload = await authService.signToken(user);
+
+      // Emits to Socket.io
+      emitLogin(user);
 
       res.json(payload);
     } catch (err) {

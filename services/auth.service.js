@@ -2,7 +2,7 @@
 const boom = require('@hapi/boom');
 const { config } = require('../config/config');
 const { sendMail } = require('../libs/mailer');
-const { hashVerifyPassword, hashPassword } = require('../libs/pass-hash');
+const { hashVerifyPassword } = require('../libs/pass-hash');
 const { signToken, buildPayload, signRecoveryToken, verifyRecoveryToken } = require('../libs/token');
 const UserService = require('./user.service');
 const userService = new UserService();
